@@ -69,7 +69,7 @@ module.exports = {
       2,
       "never",
       {
-        "singleValue": true
+        "singleValue": false
       }
     ],
     "object-curly-spacing": [
