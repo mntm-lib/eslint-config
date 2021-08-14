@@ -33,28 +33,28 @@ module.exports = defineConfig({
   },
   rules: {
     'for-direction': 'error',
-    'getter-return': [ 'error', { allowImplicit: true }],
+    'getter-return': ['error', { allowImplicit: true }],
     'no-async-promise-executor': 'off',
     'no-await-in-loop': 'off',
     'no-compare-neg-zero': 'error',
-    'no-cond-assign': [ 'error', 'always' ],
+    'no-cond-assign': ['error', 'always'],
     'no-console': 'off',
-    'no-constant-condition': [ 'error', { checkLoops: true }],
+    'no-constant-condition': ['error', { checkLoops: true }],
     'no-control-regex': 'error',
     'no-debugger': 'error',
     'no-dupe-args': 'error',
     'no-dupe-else-if': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
-    'no-empty': [ 'error', { allowEmptyCatch: false }],
+    'no-empty': ['error', { allowEmptyCatch: false }],
     'no-empty-character-class': 'error',
     'no-ex-assign': 'error',
     'no-extra-boolean-cast': 'error',
     'no-func-assign': 'error',
     'no-import-assign': 'error',
-    'no-inner-declarations': [ 'error', 'both' ],
-    'no-invalid-regexp': [ 'error', { allowConstructorFlags: [ 'u', 'y' ]}],
-    'no-irregular-whitespace': [ 'error', {
+    'no-inner-declarations': ['error', 'both'],
+    'no-invalid-regexp': ['error', { allowConstructorFlags: ['u', 'y']}],
+    'no-irregular-whitespace': ['error', {
       skipComments: false,
       skipRegExps: false,
       skipStrings: false,
@@ -73,29 +73,29 @@ module.exports = defineConfig({
     'no-unreachable-loop': 'error',
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
-    'no-unsafe-optional-chaining': [ 'error', { disallowArithmeticOperators: true }],
+    'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
     'no-useless-backreference': 'error',
     'require-atomic-updates': 'off',
-    'use-isnan': [ 'error', { enforceForSwitchCase: true }],
-    'valid-typeof': [ 'error', { requireStringLiterals: true }],
+    'use-isnan': ['error', { enforceForSwitchCase: true }],
+    'valid-typeof': ['error', { requireStringLiterals: true }],
 
     // Best practices
-    'accessor-pairs': [ 'error', {
+    'accessor-pairs': ['error', {
       getWithoutSet: false,
       setWithoutGet: true,
       enforceForClassMembers: true
     }],
-    'array-callback-return': [ 'error', { allowImplicit: true }],
+    'array-callback-return': ['error', { allowImplicit: true }],
     'block-scoped-var': 'error',
-    'class-methods-use-this': [ 'error', { exceptMethods: []}],
+    'class-methods-use-this': ['error', { exceptMethods: []}],
     'complexity': 'off',
     'consistent-return': 'off',
-    'curly': [ 'error', 'all' ],
+    'curly': ['error', 'all'],
     'default-case': 'error',
     'default-case-last': 'error',
-    'dot-location': [ 'error', 'object' ],
-    'eqeqeq': [ 'error', 'always' ],
-    'grouped-accessor-pairs': [ 'error', 'getBeforeSet' ],
+    'dot-location': ['error', 'object'],
+    'eqeqeq': ['error', 'always'],
+    'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': 'off',
     'max-classes-per-file': 'off',
     'no-alert': 'error',
@@ -103,24 +103,24 @@ module.exports = defineConfig({
     'no-case-declarations': 'error',
     'no-constructor-return': 'error',
     'no-div-regex': 'error',
-    'no-else-return': [ 'error', { allowElseIf: false }],
+    'no-else-return': ['error', { allowElseIf: false }],
     'no-empty-pattern': 'error',
     'no-eq-null': 'off',
-    'no-eval': [ 'error', { allowIndirect: false }],
-    'no-extend-native': [ 'error', { exceptions: []}],
+    'no-eval': ['error', { allowIndirect: false }],
+    'no-extend-native': ['error', { exceptions: []}],
     'no-extra-bind': 'error',
     'no-extra-label': 'error',
     'no-fallthrough': 'error',
     'no-floating-decimal': 'error',
-    'no-global-assign': [ 'error', { exceptions: []}],
-    'no-implicit-coercion': 'error',
-    'no-implicit-globals': [ 'error', { lexicalBindings: false }],
+    'no-global-assign': ['error', { exceptions: []}],
+    'no-implicit-coercion': 'off',
+    'no-implicit-globals': ['error', { lexicalBindings: false }],
     'no-implied-eval': 'error',
     'no-invalid-this': 'off',
     'no-iterator': 'error',
-    'no-labels': [ 'error', { allowLoop: false, allowSwitch: false }],
+    'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
     'no-lone-blocks': 'error',
-    'no-multi-spaces': [ 'error', {
+    'no-multi-spaces': ['error', {
       ignoreEOLComments: false,
       exceptions: {
         BinaryExpression: false,
@@ -136,27 +136,27 @@ module.exports = defineConfig({
     'no-nonoctal-decimal-escape': 'error',
     'no-octal': 'error',
     'no-octal-escape': 'error',
-    'no-param-reassign': [ 'error', {
+    'no-param-reassign': ['error', {
       props: true,
       ignorePropertyModificationsFor: []
     }],
     'no-proto': 'error',
-    'no-redeclare': [ 'error', { builtinGlobals: true }],
+    'no-redeclare': ['error', { builtinGlobals: true }],
 
     // We disabled this rule since it doesn't make sense to say that we disallow
     // some properties, but then not provide any disallowed properties. But we
     // wanted to keep this line to show that we thought about this rule.
     // 'no-restricted-properties': [ 'error', {}],
 
-    'no-return-assign': [ 'error', 'always' ],
+    'no-return-assign': ['error', 'always'],
     'no-return-await': 'off',
     'no-script-url': 'error',
-    'no-self-assign': [ 'error', { props: true }],
+    'no-self-assign': ['error', { props: true }],
     'no-self-compare': 'error',
     'no-sequences': 'error',
     'no-throw-literal': 'error',
     'no-unmodified-loop-condition': 'error',
-    'no-unused-expressions': [ 'error', {
+    'no-unused-expressions': ['error', {
       allowShortCircuit: false,
       allowTernary: false,
       allowTaggedTemplates: false
@@ -171,16 +171,16 @@ module.exports = defineConfig({
     'no-warning-comments': 'off',
     'no-with': 'error',
     'prefer-named-capture-group': 'error',
-    'prefer-promise-reject-errors': [ 'error', { allowEmptyReject: false }],
+    'prefer-promise-reject-errors': ['error', { allowEmptyReject: false }],
     'prefer-regex-literals': 'error',
-    'radix': [ 'error', 'always' ],
-    'require-unicode-regexp': 'error',
+    'radix': ['error', 'always'],
+    'require-unicode-regexp': 'off',
     'vars-on-top': 'error',
-    'wrap-iife': [ 'error', 'inside', { functionPrototypeMethods: true }],
-    'yoda': [ 'error', 'never', { exceptRange: true, onlyEquality: false }],
+    'wrap-iife': ['error', 'inside', { functionPrototypeMethods: true }],
+    'yoda': ['error', 'never', { exceptRange: true, onlyEquality: false }],
 
     // Strict mode
-    'strict': [ 'error', 'never' ],
+    'strict': ['error', 'never'],
 
     // Variables
     'init-declarations': 'off',
@@ -188,57 +188,57 @@ module.exports = defineConfig({
     'no-label-var': 'error',
     'no-restricted-globals': 'error',
     'no-shadow-restricted-names': 'error',
-    'no-undef': [ 'error', { typeof: true }],
+    'no-undef': ['error', { typeof: true }],
     'no-undef-init': 'error',
     'no-undefined': 'error',
 
     // Node.js and CommonJS
-    'callback-return': [ 'error', [ 'callback', 'next' ]],
+    'callback-return': ['error', ['callback', 'next']],
     'global-require': 'error',
-    'handle-callback-err': [ 'error', 'err' ],
+    'handle-callback-err': ['error', 'err'],
     'no-buffer-constructor': 'error',
-    'no-mixed-requires': [ 'error', { grouping: true, allowCall: false }],
+    'no-mixed-requires': ['error', { grouping: true, allowCall: false }],
     'no-new-require': 'error',
     'no-path-concat': 'error',
-    'no-process-env': 'error',
+    'no-process-env': 'off',
 
     // The no-process-exit rule is superseded by the unicorn/no-process-exit rule.
     'no-process-exit': 'off',
     'no-restricted-modules': 'off',
-    'no-sync': [ 'error', { allowAtRootLevel: false }],
+    'no-sync': ['error', { allowAtRootLevel: false }],
 
     // Stylistic issues
     'array-bracket-newline': 'off',
-    'array-bracket-spacing': [ 'error', 'always', {
-      singleValue: true,
+    'array-bracket-spacing': ['error', 'never', {
+      singleValue: false,
       objectsInArrays: false,
       arraysInArrays: false
     }],
     'array-element-newline': 'off',
-    'block-spacing': [ 'error', 'always' ],
-    'capitalized-comments': [ 'error', 'always', {
+    'block-spacing': ['error', 'always'],
+    'capitalized-comments': ['error', 'always', {
       ignoreInlineComments: false,
       ignoreConsecutiveComments: true
     }],
-    'comma-dangle': [ 'error', 'never' ],
-    'comma-style': [ 'error', 'last' ],
-    'computed-property-spacing': [ 'error', 'never', { enforceForClassMembers: true }],
-    'consistent-this': [ 'error', 'that' ],
-    'eol-last': [ 'error', 'always' ],
+    'comma-dangle': ['error', 'never'],
+    'comma-style': ['error', 'last'],
+    'computed-property-spacing': ['error', 'never', { enforceForClassMembers: true }],
+    'consistent-this': ['error', 'that'],
+    'eol-last': ['error', 'always'],
     'func-name-matching': 'off',
     'func-names': 'off',
-    'func-style': [ 'error', 'expression' ],
-    'function-call-argument-newline': [ 'error', 'consistent' ],
-    'function-paren-newline': [ 'error', 'consistent' ],
+    'func-style': ['error', 'expression'],
+    'function-call-argument-newline': ['error', 'consistent'],
+    'function-paren-newline': ['error', 'consistent'],
     'id-denylist': 'off',
     'id-length': 'off',
     'id-match': 'off',
     'implicit-arrow-linebreak': 'off',
-    'jsx-quotes': [ 'error', 'prefer-single' ],
-    'key-spacing': [ 'error', { beforeColon: false, afterColon: true, mode: 'strict' }],
-    'line-comment-position': [ 'error', { position: 'above' }],
-    'linebreak-style': [ 'error', 'unix' ],
-    'lines-around-comment': [ 'error', {
+    'jsx-quotes': ['error', 'prefer-double'],
+    'key-spacing': ['error', { beforeColon: false, afterColon: true, mode: 'strict' }],
+    'line-comment-position': ['error', { position: 'above' }],
+    'linebreak-style': ['error', 'unix'],
+    'lines-around-comment': ['error', {
       beforeBlockComment: false,
       afterBlockComment: false,
       beforeLineComment: true,
@@ -260,134 +260,131 @@ module.exports = defineConfig({
     'max-nested-callbacks': 'off',
     'max-params': 'off',
     'max-statements': 'off',
-    'max-statements-per-line': [ 'error', { max: 1 }],
-    'multiline-comment-style': [ 'error', 'separate-lines' ],
-    'multiline-ternary': [ 'error', 'always-multiline' ],
-    'new-cap': [ 'error', {
+    'max-statements-per-line': ['error', { max: 1 }],
+    'multiline-comment-style': ['error', 'separate-lines'],
+    'multiline-ternary': ['error', 'always-multiline'],
+    'new-cap': ['error', {
       newIsCap: true,
       capIsNew: true,
       newIsCapExceptions: [],
       capIsNewExceptions: [],
       properties: true
     }],
-    'new-parens': [ 'error', 'always' ],
-    'newline-per-chained-call': [ 'error', { ignoreChainWithDepth: 4 }],
-    'no-bitwise': [ 'error', { allow: [], int32Hint: false }],
+    'new-parens': ['error', 'always'],
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    'no-bitwise': ['error', { allow: [], int32Hint: false }],
     'no-continue': 'off',
     'no-inline-comments': 'error',
     'no-lonely-if': 'error',
     'no-mixed-operators': 'error',
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-assign': 'error',
-    'no-multiple-empty-lines': [ 'error', { max: 1, maxEOF: 1, maxBOF: 0 }],
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1, maxBOF: 0 }],
     'no-negated-condition': 'off',
 
     // The no-nested-ternary rule is superseded by the unicorn/no-nested-ternary
     // rule.
     'no-nested-ternary': 'off',
     'no-new-object': 'error',
-    'no-plusplus': [ 'error', { allowForLoopAfterthoughts: true }],
+    'no-plusplus': 'off',
     'no-restricted-syntax': 'off',
-    'no-tabs': [ 'error', { allowIndentationTabs: false }],
+    'no-tabs': ['error', { allowIndentationTabs: false }],
     'no-ternary': 'off',
-    'no-trailing-spaces': [ 'error', {
+    'no-trailing-spaces': ['error', {
       ignoreComments: false,
       skipBlankLines: false
     }],
-    'no-underscore-dangle': [ 'error', {
-      allow: [ '__html' ],
+    'no-underscore-dangle': ['error', {
+      allow: ['__html'],
       allowAfterThis: false,
       allowAfterThisConstructor: false,
       allowAfterSuper: false,
       allowFunctionParams: false,
       enforceInMethodNames: true
     }],
-    'no-unneeded-ternary': [ 'error', { defaultAssignment: false }],
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-whitespace-before-property': 'error',
-    'nonblock-statement-body-position': [ 'error', 'below' ],
-    'object-curly-newline': [ 'error', {
+    'nonblock-statement-body-position': ['error', 'below'],
+    'object-curly-newline': ['error', {
       ObjectExpression: { consistent: true },
       ObjectPattern: { consistent: true },
       ImportDeclaration: { consistent: true },
       ExportDeclaration: { consistent: true }
     }],
-    'object-property-newline': [ 'error', { allowAllPropertiesOnSameLine: true }],
+    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     'one-var': 'off',
-    'one-var-declaration-per-line': [ 'error', 'always' ],
-    'operator-assignment': [ 'error', 'always' ],
-    'operator-linebreak': [ 'error', 'after' ],
-    'padded-blocks': [ 'error', 'never', { allowSingleLineBlocks: true }],
+    'one-var-declaration-per-line': ['error', 'always'],
+    'operator-assignment': ['error', 'always'],
+    'operator-linebreak': ['error', 'after'],
+    'padded-blocks': ['error', 'never', { allowSingleLineBlocks: true }],
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'return' },
-      { blankLine: 'always', prev: [ 'const', 'let', 'var' ], next: '*' },
-      { blankLine: 'any', prev: [ 'const', 'let', 'var' ], next: [ 'const', 'let', 'var' ]},
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var']},
       { blankLine: 'always', prev: 'directive', next: '*' },
       { blankLine: 'any', prev: 'directive', next: 'directive' }
     ],
     'prefer-exponentiation-operator': 'error',
     'prefer-object-spread': 'off',
-    'quote-props': [ 'error', 'consistent-as-needed', {
+    'quote-props': ['error', 'consistent-as-needed', {
       keywords: false,
       unnecessary: true,
       numbers: false
     }],
-    'quotes': [ 'error', 'single', { avoidEscape: false, allowTemplateLiterals: true }],
-    'semi-spacing': [ 'error', { before: false, after: true }],
-    'semi-style': [ 'error', 'last' ],
+    'quotes': ['error', 'single', { avoidEscape: false, allowTemplateLiterals: true }],
+    'semi-spacing': ['error', { before: false, after: true }],
+    'semi-style': ['error', 'last'],
     'sort-keys': 'off',
-    'sort-vars': [ 'error', { ignoreCase: true }],
-    'space-before-blocks': [ 'error', 'always' ],
-    'space-in-parens': [ 'error', 'never' ],
-    'space-unary-ops': [ 'error', { words: true, nonwords: false }],
-    'spaced-comment': [ 'error', 'always', { exceptions: [], markers: []}],
-    'switch-colon-spacing': [ 'error', { after: true, before: false }],
-    'template-tag-spacing': [ 'error', 'never' ],
-    'unicode-bom': [ 'error', 'never' ],
+    'sort-vars': ['error', { ignoreCase: true }],
+    'space-before-blocks': ['error', 'always'],
+    'space-in-parens': ['error', 'never'],
+    'space-unary-ops': ['error', { words: true, nonwords: false }],
+    'spaced-comment': ['error', 'always', { exceptions: [], markers: []}],
+    'switch-colon-spacing': ['error', { after: true, before: false }],
+    'template-tag-spacing': ['error', 'never'],
+    'unicode-bom': ['error', 'never'],
     'wrap-regex': 'off',
 
     // EcmaScript 6
-    'arrow-body-style': [ 'error', 'as-needed', {
-      requireReturnForObjectLiteral: false
-    }],
-    'arrow-parens': [ 'error', 'as-needed', {
+    'arrow-body-style': 'off',
+    'arrow-parens': ['error', 'always', {
       requireForBlockBody: false
     }],
-    'arrow-spacing': [ 'error', { before: true, after: true }],
+    'arrow-spacing': ['error', { before: true, after: true }],
     'constructor-super': 'error',
-    'generator-star-spacing': [ 'error', { before: true, after: true }],
+    'generator-star-spacing': ['error', { before: true, after: true }],
     'no-class-assign': 'error',
     'no-confusing-arrow': 'off',
     'no-const-assign': 'error',
-    'no-duplicate-imports': [ 'error', { includeExports: true }],
     'no-new-symbol': 'error',
     'no-restricted-exports': 'off',
     'no-restricted-imports': 'off',
     'no-this-before-super': 'error',
-    'no-useless-computed-key': [ 'error', { enforceForClassMembers: true }],
-    'no-useless-rename': [ 'error', {
+    'no-useless-computed-key': ['error', { enforceForClassMembers: true }],
+    'no-useless-rename': ['error', {
       ignoreDestructuring: false,
       ignoreImport: false,
       ignoreExport: false
     }],
     'no-var': 'error',
-    'object-shorthand': [ 'error', 'always', {
+    'object-shorthand': ['error', 'always', {
       avoidQuotes: false,
       ignoreConstructors: false,
       avoidExplicitReturnArrows: true
     }],
-    'prefer-arrow-callback': [ 'error', {
+    'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
       allowUnboundThis: true
     }],
-    'prefer-const': [ 'error', {
+    'prefer-const': ['error', {
       destructuring: 'any',
       ignoreReadBeforeAssign: true
     }],
 
     // Arrays are disabled here because of the unicorn/no-unreadable-array-destructuring
     // rule.
-    'prefer-destructuring': [ 'error',
+    'prefer-destructuring': ['error',
       { array: false, object: true },
       { enforceForRenamedProperties: false }
     ],
@@ -396,50 +393,34 @@ module.exports = defineConfig({
     'prefer-spread': 'off',
     'prefer-template': 'error',
     'require-yield': 'error',
-    'rest-spread-spacing': [ 'error', 'never' ],
-    'sort-imports': [ 'error', {
-      ignoreCase: true,
-      ignoreDeclarationSort: false,
+    'rest-spread-spacing': ['error', 'never'],
+    'sort-imports': ['error', {
+      ignoreCase: false,
+      ignoreDeclarationSort: true,
       ignoreMemberSort: false,
-      memberSyntaxSortOrder: [ 'single', 'multiple', 'all', 'none' ]
+      memberSyntaxSortOrder: ['none', 'single', 'multiple', 'all']
     }],
     'symbol-description': 'error',
-    'template-curly-spacing': [ 'error', 'never' ],
-    'yield-star-spacing': [ 'error', { before: true, after: true }],
+    'template-curly-spacing': ['error', 'never'],
+    'yield-star-spacing': ['error', { before: true, after: true }],
 
-    // Plugin eslint-comments
-    'eslint-comments/disable-enable-pair': 'error',
-    'eslint-comments/no-aggregating-enable': 'error',
-    'eslint-comments/no-duplicate-disable': 'error',
-    'eslint-comments/no-unlimited-disable': 'error',
-    'eslint-comments/no-unused-disable': 'error',
-    'eslint-comments/no-unused-enable': 'error',
-
-    'eslint-comments/no-restricted-disable': 'off',
-    'eslint-comments/no-use': 'off',
-
-    // TODO [eslint-plugin-eslint-comments@>3.2.0]: This should be turned on,
-    // once https://github.com/mysticatea/eslint-plugin-eslint-comments/pull/56
-    // has been merged.
-    'eslint-comments/require-description': 'off',
-
-    'unicorn/better-regex': [ 'error', { sortCharacterClasses: true }],
-    'unicorn/catch-error-name': [ 'error', { name: 'ex', ignore: [ '^ex([A-Z0-9].*)?$' ]}],
+    'unicorn/better-regex': ['error', { sortCharacterClasses: true }],
+    'unicorn/catch-error-name': ['error', { name: 'ex', ignore: ['^ex([A-Z0-9].*)?$']}],
     'unicorn/consistent-destructuring': 'error',
     'unicorn/consistent-function-scoping': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
-    'unicorn/expiring-todo-comments': [ 'error', {
+    'unicorn/expiring-todo-comments': ['error', {
       ignoreDatesOnPullRequests: false,
-      terms: [ 'todo' ],
+      terms: ['todo'],
       allowWarningComments: false
     }],
-    'unicorn/explicit-length-check': [ 'error', { 'non-zero': 'greater-than' }],
+    'unicorn/explicit-length-check': ['error', { 'non-zero': 'greater-than' }],
     'unicorn/filename-case': 'off',
-    'unicorn/import-index': [ 'error', { ignoreImports: false }],
-    'unicorn/import-style': [ 'error', {
+    'unicorn/import-index': ['error', { ignoreImports: false }],
+    'unicorn/import-style': ['error', {
       styles: {
         crypto: { unassigned: false, default: true, namespace: false, named: false },
         fs: { unassigned: false, default: true, namespace: false, named: false },
@@ -481,12 +462,7 @@ module.exports = defineConfig({
     'unicorn/no-useless-undefined': 'error',
     'unicorn/no-zero-fractions': 'error',
     'unicorn/number-literal-case': 'error',
-    'unicorn/numeric-separators-style': [ 'error', {
-      hexadecimal: { minimumDigits: 0, groupLength: 2 },
-      binary: { minimumDigits: 0, groupLength: 4 },
-      octal: { minimumDigits: 0, groupLength: 4 },
-      number: { minimumDigits: 0, groupLength: 3 }
-    }],
+    'unicorn/numeric-separators-style': 'off',
     'unicorn/prefer-add-event-listener': 'off',
     'unicorn/prefer-array-find': 'error',
     'unicorn/prefer-array-flat': 'error',
@@ -535,14 +511,14 @@ module.exports = defineConfig({
     'react/boolean-prop-naming': 'off',
     'react/button-has-type': 'off',
     'react/default-props-match-prop-types': 'off',
-    'react/destructuring-assignment': [ 'error', 'always' ],
+    'react/destructuring-assignment': ['error', 'always'],
     'react/display-name': 'off',
     'react/forbid-component-props': 'off',
     'react/forbid-dom-props': 'off',
     'react/forbid-elements': 'off',
     'react/forbid-prop-types': 'off',
     'react/forbid-foreign-prop-types': 'off',
-    'react/jsx-curly-newline': [ 'error', {
+    'react/jsx-curly-newline': ['error', {
       multiline: 'consistent',
       singleline: 'consistent'
     }],
@@ -561,7 +537,7 @@ module.exports = defineConfig({
     'react/no-redundant-should-component-update': 'error',
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'off',
-    'react/no-string-refs': [ 'error', { noTemplateLiterals: true }],
+    'react/no-string-refs': ['error', { noTemplateLiterals: true }],
     'react/no-this-in-sfc': 'error',
     'react/no-typos': 'error',
     'react/no-unescaped-entities': 'error',
@@ -570,61 +546,64 @@ module.exports = defineConfig({
     'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': 'error',
-    'react/prefer-es6-class': [ 'error', 'always' ],
+    'react/prefer-es6-class': ['error', 'always'],
     'react/prefer-read-only-props': 'off',
-    'react/prefer-stateless-function': [ 'error', {
+    'react/prefer-stateless-function': ['error', {
       ignorePureComponents: false
     }],
     'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'error',
+
+    // Disabled due to auto-import support
+    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'react/require-optimization': 'off',
     'react/require-render-return': 'error',
-    'react/self-closing-comp': [ 'error', {
+    'react/self-closing-comp': ['error', {
       component: true,
       html: true
     }],
     'react/sort-comp': 'error',
-    'react/sort-prop-types': [ 'error', {
+    'react/sort-prop-types': ['error', {
       callbacksLast: true,
       ignoreCase: true,
       requiredFirst: true,
       sortShapeProp: true,
       noSortAlphabetically: false
     }],
-    'react/state-in-constructor': [ 'error', 'always' ],
+    'react/state-in-constructor': ['error', 'always'],
     'react/static-property-placement': 'off',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
 
-    'react/jsx-boolean-value': [ 'error', 'always' ],
+    'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-child-element-spacing': 'error',
-    'react/jsx-closing-bracket-location': [ 'error', 'tag-aligned' ],
+    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-closing-tag-location': 'error',
-    'react/jsx-curly-spacing': [ 'error', {
-      when: 'always',
-      spacing: { objectLiterals: 'never' }
+    'react/jsx-curly-spacing': ['error', {
+      when: 'never',
+      objectLiterals: 'never',
+      allowMultiline: false
     }],
-    'react/jsx-equals-spacing': [ 'error', 'never' ],
-    'react/jsx-filename-extension': [ 'error', {
-      extensions: [ '.jsx', '.tsx' ]
+    'react/jsx-equals-spacing': ['error', 'never'],
+    'react/jsx-filename-extension': ['error', {
+      extensions: ['.jsx', '.tsx']
     }],
-    'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
-    'react/jsx-handler-names': [ 'error', {
+    'react/jsx-first-prop-new-line': ['error', 'multiline'],
+    'react/jsx-handler-names': ['error', {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
       checkLocalVariables: false
     }],
-    'react/jsx-indent': [ 'error', 2 ],
-    'react/jsx-indent-props': [ 'error', { indentMode: 2, ignoreTernaryOperator: false }],
-    'react/jsx-key': [ 'error', {
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', { indentMode: 2, ignoreTernaryOperator: false }],
+    'react/jsx-key': ['error', {
       checkFragmentShorthand: true,
       checkKeyMustBeforeSpread: true
     }],
     'react/jsx-max-depth': 'off',
     'react/jsx-max-props-per-line': 'off',
     'react/jsx-newline': 'off',
-    'react/jsx-no-bind': [ 'error', {
+    'react/jsx-no-bind': ['error', {
       ignoreRefs: false,
       ignoreDOMComponents: false,
       allowArrowFunctions: true,
@@ -633,24 +612,24 @@ module.exports = defineConfig({
     }],
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-constructed-context-values': 'error',
-    'react/jsx-no-duplicate-props': [ 'error', { ignoreCase: true }],
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
     'react/jsx-no-literals': 'off',
-    'react/jsx-no-target-blank': [ 'error', {
+    'react/jsx-no-target-blank': ['error', {
       allowReferrer: false,
       enforceDynamicLinks: 'always',
       warnOnSpreadAttributes: true
     }],
-    'react/jsx-no-undef': [ 'error', { allowGlobals: false }],
+    'react/jsx-no-undef': ['error', { allowGlobals: false }],
     'react/jsx-no-useless-fragment': 'error',
     'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-curly-brace-presence': [ 'error', 'never' ],
-    'react/jsx-fragments': [ 'error', 'element' ],
-    'react/jsx-pascal-case': [ 'error', { allowAllCaps: false, ignore: []}],
+    'react/jsx-curly-brace-presence': ['error', 'never'],
+    'react/jsx-fragments': ['error', 'syntax'],
+    'react/jsx-pascal-case': ['error', { allowAllCaps: false, ignore: []}],
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-sort-default-props': 'off',
     'react/jsx-sort-props': 'off',
-    'react/jsx-tag-spacing': [ 'error', {
+    'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
       afterOpening: 'never',
@@ -664,9 +643,9 @@ module.exports = defineConfig({
     'react-hooks/exhaustive-deps': 'off',
 
     '@typescript-eslint/adjacent-overload-signatures': 'error',
-    '@typescript-eslint/array-type': [ 'error', { default: 'array' }],
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/ban-ts-comment': [ 'error', {
+    '@typescript-eslint/ban-ts-comment': ['error', {
       'ts-ignore': false,
       'ts-nocheck': true,
       'ts-check': true
@@ -681,40 +660,41 @@ module.exports = defineConfig({
       }
     ],
     'brace-style': 'off',
-    '@typescript-eslint/brace-style': [ 'error', '1tbs', { allowSingleLine: false }],
-    '@typescript-eslint/class-literal-property-style': [ 'error', 'fields' ],
+    '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
+    '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': 'error',
-    '@typescript-eslint/consistent-indexed-object-style': [ 'error', 'record' ],
-    '@typescript-eslint/consistent-type-assertions': [ 'error', {
+    '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
+    '@typescript-eslint/consistent-type-assertions': ['error', {
       assertionStyle: 'as',
       objectLiteralTypeAssertions: 'allow'
     }],
-    '@typescript-eslint/consistent-type-definitions': [ 'error', 'interface' ],
-    '@typescript-eslint/consistent-type-imports': [ 'error', {
-      prefer: 'no-type-imports',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-imports': ['error', {
+      prefer: 'type-imports',
       disallowTypeAnnotations: true
     }],
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
     'dot-notation': 'off',
-    '@typescript-eslint/dot-notation': [ 'error', {
+    '@typescript-eslint/dot-notation': ['error', {
       allowKeywords: true,
       allowPrivateClassPropertyAccess: false
     }],
-    '@typescript-eslint/explicit-function-return-type': [ 'error', {
-      allowExpressions: false,
-      allowTypedFunctionExpressions: false,
-      allowHigherOrderFunctions: false
-    }],
-    '@typescript-eslint/explicit-member-accessibility': [ 'error', {
+    'no-duplicate-imports': 'off',
+    '@typescript-eslint/no-duplicate-imports': ['error', { includeExports: true }],
+
+    // This rule is turned off since it not only applies to ts, but
+    // also to js and can break valid code
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': ['error', {
       accessibility: 'explicit'
     }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
+    '@typescript-eslint/func-call-spacing': ['error', 'never'],
     'indent': 'off',
-    '@typescript-eslint/indent': [ 'error', 2, {
+    '@typescript-eslint/indent': ['error', 2, {
       SwitchCase: 1,
       VariableDeclarator: { var: 2, let: 2, const: 3 },
       outerIIFEBody: 1,
@@ -731,20 +711,20 @@ module.exports = defineConfig({
       ignoredNodes: [],
       ignoreComments: false
     }],
-    '@typescript-eslint/init-declarations': [ 'off' ],
+    '@typescript-eslint/init-declarations': ['off'],
     'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': [ 'error', { before: true, after: true }],
+    '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
     'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': [ 'error', 'always', {
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', {
       exceptAfterSingleLine: false,
       exceptAfterOverload: false
     }],
-    '@typescript-eslint/member-delimiter-style': [ 'error', {
+    '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: { delimiter: 'semi', requireLast: true },
       singleline: { delimiter: 'semi', requireLast: false }
     }],
     '@typescript-eslint/member-ordering': 'off',
-    '@typescript-eslint/method-signature-style': [ 'error', 'property' ],
+    '@typescript-eslint/method-signature-style': ['error', 'property'],
     'camelcase': 'off',
     '@typescript-eslint/naming-convention': 'off',
     'no-array-constructor': 'off',
@@ -756,12 +736,12 @@ module.exports = defineConfig({
     '@typescript-eslint/no-dynamic-delete': 'error',
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'error',
-    '@typescript-eslint/no-empty-interface': [ 'error', {
+    '@typescript-eslint/no-empty-interface': ['error', {
       allowSingleExtends: false
     }],
     '@typescript-eslint/no-explicit-any': 'off',
     'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [ 'error', 'all', {
+    '@typescript-eslint/no-extra-parens': ['error', 'all', {
       conditionalAssign: false,
       enforceForArrowConditionals: false,
       ignoreJSX: 'all',
@@ -770,20 +750,20 @@ module.exports = defineConfig({
     }],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
-    '@typescript-eslint/no-extraneous-class': [ 'error', {
+    '@typescript-eslint/no-extraneous-class': ['error', {
       allowConstructorOnly: false,
       allowEmpty: false,
       allowStaticOnly: false
     }],
-    '@typescript-eslint/no-floating-promises': [ 'error', {
+    '@typescript-eslint/no-floating-promises': ['error', {
       ignoreVoid: false
     }],
     '@typescript-eslint/no-for-in-array': 'error',
-    '@typescript-eslint/no-implicit-any-catch': [ 'error', {
+    '@typescript-eslint/no-implicit-any-catch': ['error', {
       allowExplicitAny: false
     }],
     '@typescript-eslint/no-implied-eval': 'error',
-    '@typescript-eslint/no-inferrable-types': [ 'error', {
+    '@typescript-eslint/no-inferrable-types': ['error', {
       ignoreParameters: false,
       ignoreProperties: false
     }],
@@ -796,11 +776,11 @@ module.exports = defineConfig({
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': 'off',
     '@typescript-eslint/no-misused-new': 'error',
-    '@typescript-eslint/no-misused-promises': [ 'error', {
+    '@typescript-eslint/no-misused-promises': ['error', {
       checksConditionals: true,
       checksVoidReturn: false
     }],
-    '@typescript-eslint/no-namespace': [ 'error', {
+    '@typescript-eslint/no-namespace': ['error', {
       allowDeclarations: false,
       allowDefinitionFiles: true
     }],
@@ -809,21 +789,20 @@ module.exports = defineConfig({
     '@typescript-eslint/no-parameter-properties': 'off',
     '@typescript-eslint/no-require-imports': 'error',
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': [ 'error', { builtinGlobals: false, hoist: 'functions', allow: []}],
-    '@typescript-eslint/no-this-alias': [ 'error', {
+    '@typescript-eslint/no-shadow': ['error', { builtinGlobals: false, hoist: 'functions', allow: []}],
+    '@typescript-eslint/no-this-alias': ['error', {
       allowDestructuring: false,
       allowedNames: []
     }],
     '@typescript-eslint/no-throw-literal': 'error',
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-    '@typescript-eslint/no-unnecessary-condition': [ 'error', {
-      allowConstantLoopConditions: false,
-      allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false
-    }],
+
+    // This is syntactic but not semantic and breaks valid code
+    '@typescript-eslint/no-unnecessary-condition': 'off',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-    '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
+    '@typescript-eslint/no-unnecessary-type-assertion': ['error', {
       typesToIgnore: []
     }],
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
@@ -833,9 +812,9 @@ module.exports = defineConfig({
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
+    '@typescript-eslint/no-unused-vars': ['error', { vars: 'all' }],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [ 'error', {
+    '@typescript-eslint/no-use-before-define': ['error', {
       functions: true,
       classes: true,
       enums: true,
@@ -847,7 +826,7 @@ module.exports = defineConfig({
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': [ 'error', 'always', {
+    '@typescript-eslint/object-curly-spacing': ['error', 'always', {
       objectsInObjects: false,
       arraysInObjects: false
     }],
@@ -858,17 +837,14 @@ module.exports = defineConfig({
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-literal-enum-member': 'error',
     '@typescript-eslint/prefer-namespace-keyword': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': [ 'error', {
-      ignoreConditionalTests: false,
-      ignoreMixedLogicalExpressions: false
-    }],
-    '@typescript-eslint/prefer-readonly': [ 'error', { onlyInlineLambdas: false }],
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    '@typescript-eslint/prefer-readonly': ['error', { onlyInlineLambdas: false }],
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-    '@typescript-eslint/promise-function-async': [ 'error', {
+    '@typescript-eslint/promise-function-async': ['error', {
       allowAny: true,
       allowedPromiseNames: [],
       checkArrowFunctions: true,
@@ -882,21 +858,21 @@ module.exports = defineConfig({
     '@typescript-eslint/restrict-plus-operands': 'error',
     '@typescript-eslint/restrict-template-expressions': 'off',
     'semi': 'off',
-    '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
+    '@typescript-eslint/semi': ['error', 'always', { omitLastInOneLineBlock: false }],
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'error',
     'space-infix-ops': 'off',
-    '@typescript-eslint/space-infix-ops': [ 'error', { int32Hint: false }],
+    '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
-    '@typescript-eslint/type-annotation-spacing': [ 'error', {
+    '@typescript-eslint/type-annotation-spacing': ['error', {
       before: false,
       after: true,
       overrides: { arrow: { before: true, after: true }}
     }],
     '@typescript-eslint/typedef': 'off',
-    '@typescript-eslint/unbound-method': [ 'error', { ignoreStatic: true }],
+    '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
     '@typescript-eslint/unified-signatures': 'error',
 
     'sonarjs/cognitive-complexity': 'error',
