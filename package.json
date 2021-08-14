@@ -1,6 +1,6 @@
 {
   "name": "@mntm/eslint-config",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "index.js",
   "author": {
     "name": "Anton Petrov",
@@ -22,6 +22,7 @@
     "url": "https://github.com/maxi-team/eslint-config.git"
   },
   "dependencies": {
+    "@rushstack/eslint-patch": "^1.0.6",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint-define-config": "^1.0.9",

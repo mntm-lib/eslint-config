@@ -1,6 +1,10 @@
 const { defineConfig } = require('eslint-define-config');
 
+// Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 module.exports = defineConfig({
+  root: true,
   plugins: [
     '@typescript-eslint',
     'react',
@@ -70,7 +74,7 @@ module.exports = defineConfig({
     'no-template-curly-in-string': 'error',
     'no-unexpected-multiline': 'error',
     'no-unreachable': 'error',
-    'no-unreachable-loop': 'error',
+    'no-unreachable-loop': ['error', { ignore: ['ForInStatement', 'ForOfStatement']}],
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
     'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
@@ -94,7 +98,7 @@ module.exports = defineConfig({
     'default-case': 'error',
     'default-case-last': 'error',
     'dot-location': ['error', 'object'],
-    'eqeqeq': ['error', 'always'],
+    'eqeqeq': ['error', 'always', { null: 'ignore' }],
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': 'off',
     'max-classes-per-file': 'off',
@@ -137,8 +141,7 @@ module.exports = defineConfig({
     'no-octal': 'error',
     'no-octal-escape': 'error',
     'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: []
+      props: false
     }],
     'no-proto': 'error',
     'no-redeclare': ['error', { builtinGlobals: true }],
@@ -294,14 +297,7 @@ module.exports = defineConfig({
       ignoreComments: false,
       skipBlankLines: false
     }],
-    'no-underscore-dangle': ['error', {
-      allow: ['__html'],
-      allowAfterThis: false,
-      allowAfterThisConstructor: false,
-      allowAfterSuper: false,
-      allowFunctionParams: false,
-      enforceInMethodNames: true
-    }],
+    'no-underscore-dangle': 'off',
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-whitespace-before-property': 'error',
     'nonblock-statement-body-position': ['error', 'below'],
@@ -416,10 +412,12 @@ module.exports = defineConfig({
     'unicorn/import-style': 'off',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
-    'unicorn/no-array-callback-reference': 'error',
+    'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-method-this-argument': 'error',
-    'unicorn/no-array-reduce': 'off',
-    'unicorn/no-console-spaces': 'error',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-push-push': 'off',
+    'unicorn/no-array-reduce': 'error',
+    'unicorn/no-console-spaces': 'off',
     'unicorn/no-document-cookie': 'error',
     'unicorn/no-for-loop': 'error',
     'unicorn/no-hex-escape': 'error',
@@ -448,14 +446,14 @@ module.exports = defineConfig({
     'unicorn/prefer-array-flat-map': 'error',
     'unicorn/prefer-array-index-of': 'error',
     'unicorn/prefer-array-some': 'error',
-    'unicorn/prefer-at': 'error',
+    'unicorn/prefer-at': 'off',
     'unicorn/prefer-date-now': 'error',
     'unicorn/prefer-default-parameters': 'error',
     'unicorn/prefer-dom-node-append': 'off',
     'unicorn/prefer-dom-node-dataset': 'error',
     'unicorn/prefer-dom-node-remove': 'off',
     'unicorn/prefer-dom-node-text-content': 'off',
-    'unicorn/prefer-object-has-own': 'error',
+    'unicorn/prefer-object-has-own': 'off',
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-keyboard-event-key': 'error',
     'unicorn/prefer-math-trunc': 'error',
@@ -467,7 +465,7 @@ module.exports = defineConfig({
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prefer-reflect-apply': 'error',
     'unicorn/prefer-regexp-test': 'error',
-    'unicorn/prefer-set-has': 'error',
+    'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-spread': 'off',
     'unicorn/prefer-string-replace-all': 'error',
     'unicorn/prefer-string-slice': 'error',
@@ -478,7 +476,7 @@ module.exports = defineConfig({
     // expressions using await/throw/yield as well. We have opened an issue to try
     // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
     'unicorn/prefer-ternary': 'off',
-    'unicorn/prefer-top-level-await': 'error',
+    'unicorn/prefer-top-level-await': 'off',
     'unicorn/prefer-type-error': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/require-array-join-separator': 'error',
@@ -866,13 +864,13 @@ module.exports = defineConfig({
     'sonarjs/no-extra-arguments': 'error',
     'sonarjs/no-gratuitous-expressions': 'error',
     'sonarjs/no-identical-conditions': 'error',
-    'sonarjs/no-identical-expressions': 'error',
-    'sonarjs/no-identical-functions': 'error',
-    'sonarjs/no-ignored-return': 'error',
+    'sonarjs/no-identical-expressions': 'off',
+    'sonarjs/no-identical-functions': 'off',
+    'sonarjs/no-ignored-return': 'off',
     'sonarjs/no-inverted-boolean-check': 'error',
     'sonarjs/no-nested-switch': 'error',
     'sonarjs/no-nested-template-literals': 'error',
-    'sonarjs/no-one-iteration-loop': 'error',
+    'sonarjs/no-one-iteration-loop': 'off',
     'sonarjs/no-redundant-boolean': 'error',
     'sonarjs/no-redundant-jump': 'error',
     'sonarjs/no-same-line-conditional': 'error',
