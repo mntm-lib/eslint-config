@@ -836,7 +836,7 @@ module.exports = defineConfig({
     'semi': 'off',
     '@typescript-eslint/semi': ['error', 'always', { omitLastInOneLineBlock: false }],
     'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': 'error',
+    '@typescript-eslint/space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': ['error', { int32Hint: false }],
     '@typescript-eslint/strict-boolean-expressions': 'off',
