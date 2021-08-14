@@ -170,7 +170,7 @@ module.exports = defineConfig({
     'no-void': 'error',
     'no-warning-comments': 'off',
     'no-with': 'error',
-    'prefer-named-capture-group': 'error',
+    'prefer-named-capture-group': 'off',
     'prefer-promise-reject-errors': ['error', { allowEmptyReject: false }],
     'prefer-regex-literals': 'error',
     'radix': ['error', 'always'],
@@ -384,10 +384,7 @@ module.exports = defineConfig({
 
     // Arrays are disabled here because of the unicorn/no-unreadable-array-destructuring
     // rule.
-    'prefer-destructuring': ['error',
-      { array: false, object: true },
-      { enforceForRenamedProperties: false }
-    ],
+    'prefer-destructuring': 'off',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'off',
@@ -406,35 +403,17 @@ module.exports = defineConfig({
 
     'unicorn/better-regex': ['error', { sortCharacterClasses: true }],
     'unicorn/catch-error-name': ['error', { name: 'ex', ignore: ['^ex([A-Z0-9].*)?$']}],
-    'unicorn/consistent-destructuring': 'error',
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/consistent-function-scoping': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
-    'unicorn/expiring-todo-comments': ['error', {
-      ignoreDatesOnPullRequests: false,
-      terms: ['todo'],
-      allowWarningComments: false
-    }],
+    'unicorn/expiring-todo-comments': 'off',
     'unicorn/explicit-length-check': ['error', { 'non-zero': 'greater-than' }],
     'unicorn/filename-case': 'off',
-    'unicorn/import-index': ['error', { ignoreImports: false }],
-    'unicorn/import-style': ['error', {
-      styles: {
-        crypto: { unassigned: false, default: true, namespace: false, named: false },
-        fs: { unassigned: false, default: true, namespace: false, named: false },
-        path: { unassigned: false, default: true, namespace: false, named: false },
-        stream: { unassigned: false, default: false, namespace: false, named: true },
-        url: { unassigned: false, default: false, namespace: false, named: true },
-        util: { unassigned: false, default: false, namespace: false, named: true }
-      },
-      extendDefaultStyles: false,
-      checkImport: true,
-      checkDynamicImport: true,
-      checkExportFrom: true,
-      checkRequire: true
-    }],
+    'unicorn/import-index': 'off',
+    'unicorn/import-style': 'off',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
     'unicorn/no-array-callback-reference': 'error',
@@ -555,6 +534,8 @@ module.exports = defineConfig({
 
     // Disabled due to auto-import support
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+
     'react/require-default-props': 'off',
     'react/require-optimization': 'off',
     'react/require-render-return': 'error',
@@ -592,7 +573,7 @@ module.exports = defineConfig({
     'react/jsx-handler-names': ['error', {
       eventHandlerPrefix: 'handle',
       eventHandlerPropPrefix: 'on',
-      checkLocalVariables: false
+      checkLocalVariables: true
     }],
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', { indentMode: 2, ignoreTernaryOperator: false }],
@@ -635,7 +616,6 @@ module.exports = defineConfig({
       afterOpening: 'never',
       beforeClosing: 'never'
     }],
-    'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': 'error',
 
@@ -669,7 +649,7 @@ module.exports = defineConfig({
       assertionStyle: 'as',
       objectLiteralTypeAssertions: 'allow'
     }],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/consistent-type-imports': ['error', {
       prefer: 'type-imports',
       disallowTypeAnnotations: true
@@ -755,9 +735,7 @@ module.exports = defineConfig({
       allowEmpty: false,
       allowStaticOnly: false
     }],
-    '@typescript-eslint/no-floating-promises': ['error', {
-      ignoreVoid: false
-    }],
+    '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-implicit-any-catch': ['error', {
       allowExplicitAny: false
@@ -872,12 +850,12 @@ module.exports = defineConfig({
       overrides: { arrow: { before: true, after: true }}
     }],
     '@typescript-eslint/typedef': 'off',
-    '@typescript-eslint/unbound-method': ['error', { ignoreStatic: true }],
+    '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/unified-signatures': 'error',
 
-    'sonarjs/cognitive-complexity': 'error',
+    'sonarjs/cognitive-complexity': 'off',
     'sonarjs/elseif-without-else': 'error',
-    'sonarjs/max-switch-cases': 'error',
+    'sonarjs/max-switch-cases': 'off',
     'sonarjs/no-all-duplicated-branches': 'error',
     'sonarjs/no-collapsible-if': 'error',
     'sonarjs/no-collection-size-mischeck': 'error',
@@ -898,7 +876,7 @@ module.exports = defineConfig({
     'sonarjs/no-redundant-boolean': 'error',
     'sonarjs/no-redundant-jump': 'error',
     'sonarjs/no-same-line-conditional': 'error',
-    'sonarjs/no-small-switch': 'error',
+    'sonarjs/no-small-switch': 'off',
     'sonarjs/no-unused-collection': 'error',
     'sonarjs/no-use-of-empty-return-value': 'error',
     'sonarjs/no-useless-catch': 'error',
@@ -906,7 +884,7 @@ module.exports = defineConfig({
     'sonarjs/prefer-immediate-return': 'error',
     'sonarjs/prefer-object-literal': 'error',
     'sonarjs/prefer-single-boolean-return': 'error',
-    'sonarjs/prefer-while': 'error'
+    'sonarjs/prefer-while': 'off'
   },
   settings: {
     react: {

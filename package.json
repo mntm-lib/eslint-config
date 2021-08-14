@@ -1,6 +1,6 @@
 {
   "name": "@mntm/eslint-config",
-  "version": "0.3.0-experimental.1",
+  "version": "0.3.0",
   "main": "index.js",
   "author": {
     "name": "Anton Petrov",
