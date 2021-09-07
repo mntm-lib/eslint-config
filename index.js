@@ -549,7 +549,7 @@ module.exports = defineConfig({
       sortShapeProp: true,
       noSortAlphabetically: false
     }],
-    'react/state-in-constructor': ['error', 'always'],
+    'react/state-in-constructor': ['error', 'never'],
     'react/static-property-placement': 'off',
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
