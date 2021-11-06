@@ -91,7 +91,7 @@ module.exports = defineConfig({
     }],
     'array-callback-return': ['error', { allowImplicit: true }],
     'block-scoped-var': 'error',
-    'class-methods-use-this': ['error', { exceptMethods: []}],
+    'class-methods-use-this': 'off',
     'complexity': 'off',
     'consistent-return': 'off',
     'curly': ['error', 'all'],
@@ -140,9 +140,7 @@ module.exports = defineConfig({
     'no-nonoctal-decimal-escape': 'error',
     'no-octal': 'error',
     'no-octal-escape': 'error',
-    'no-param-reassign': ['error', {
-      props: false
-    }],
+    'no-param-reassign': 'off',
     'no-proto': 'error',
     'no-redeclare': ['error', { builtinGlobals: true }],
 
@@ -266,13 +264,7 @@ module.exports = defineConfig({
     'max-statements-per-line': ['error', { max: 1 }],
     'multiline-comment-style': ['error', 'separate-lines'],
     'multiline-ternary': ['error', 'always-multiline'],
-    'new-cap': ['error', {
-      newIsCap: true,
-      capIsNew: true,
-      newIsCapExceptions: [],
-      capIsNewExceptions: [],
-      properties: true
-    }],
+    'new-cap': 'off',
     'new-parens': ['error', 'always'],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
     'no-bitwise': ['error', { allow: [], int32Hint: false }],
@@ -665,9 +657,7 @@ module.exports = defineConfig({
     // This rule is turned off since it not only applies to ts, but
     // also to js and can break valid code
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': ['error', {
-      accessibility: 'explicit'
-    }],
+    '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': ['error', 'never'],
@@ -677,11 +667,11 @@ module.exports = defineConfig({
       VariableDeclarator: { var: 2, let: 2, const: 3 },
       outerIIFEBody: 1,
       MemberExpression: 1,
-      FunctionDeclaration: { parameters: 1, body: 1 },
+      FunctionDeclaration: { parameters: 'first', body: 1 },
 
       // @ts-expect-error wrong type
-      FunctionExpression: { parameters: 1, body: 1 },
-      CallExpression: { arguments: 1 },
+      FunctionExpression: { parameters: 'first', body: 1 },
+      CallExpression: { arguments: 'first' },
       ArrayExpression: 1,
       ObjectExpression: 1,
       ImportDeclaration: 1,
@@ -728,11 +718,7 @@ module.exports = defineConfig({
     }],
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
-    '@typescript-eslint/no-extraneous-class': ['error', {
-      allowConstructorOnly: false,
-      allowEmpty: false,
-      allowStaticOnly: false
-    }],
+    '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-implicit-any-catch': ['error', {
