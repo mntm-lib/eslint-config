@@ -10,7 +10,8 @@ module.exports = defineConfig({
     'react',
     'react-hooks',
     'unicorn',
-    'sonarjs'
+    'sonarjs',
+    'functional'
   ],
   env: {
     browser: true,
@@ -36,7 +37,7 @@ module.exports = defineConfig({
     }
   },
   rules: {
-    'for-direction': 'error',
+    'for-direction': 'off',
     'getter-return': ['error', { allowImplicit: true }],
     'no-async-promise-executor': 'off',
     'no-await-in-loop': 'off',
@@ -144,11 +145,12 @@ module.exports = defineConfig({
     'no-proto': 'error',
     'no-redeclare': ['error', { builtinGlobals: true }],
 
-    // We disabled this rule since it doesn't make sense to say that we disallow
-    // some properties, but then not provide any disallowed properties. But we
-    // wanted to keep this line to show that we thought about this rule.
-    // 'no-restricted-properties': [ 'error', {}],
-
+    /*
+     * We disabled this rule since it doesn't make sense to say that we disallow
+     * some properties, but then not provide any disallowed properties. But we
+     * wanted to keep this line to show that we thought about this rule.
+     * 'no-restricted-properties': [ 'error', {}],
+     */
     'no-return-assign': ['error', 'always'],
     'no-return-await': 'off',
     'no-script-url': 'error',
@@ -262,14 +264,14 @@ module.exports = defineConfig({
     'max-params': 'off',
     'max-statements': 'off',
     'max-statements-per-line': ['error', { max: 1 }],
-    'multiline-comment-style': ['error', 'separate-lines'],
+    'multiline-comment-style': ['error', 'starred-block'],
     'multiline-ternary': ['error', 'always-multiline'],
     'new-cap': 'off',
     'new-parens': ['error', 'always'],
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
     'no-bitwise': ['error', { allow: [], int32Hint: false }],
     'no-continue': 'off',
-    'no-inline-comments': 'error',
+    'no-inline-comments': 'off',
     'no-lonely-if': 'error',
     'no-mixed-operators': 'error',
     'no-mixed-spaces-and-tabs': 'error',
@@ -277,8 +279,10 @@ module.exports = defineConfig({
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1, maxBOF: 0 }],
     'no-negated-condition': 'off',
 
-    // The no-nested-ternary rule is superseded by the unicorn/no-nested-ternary
-    // rule.
+    /*
+     * The no-nested-ternary rule is superseded by the unicorn/no-nested-ternary
+     * rule.
+     */
     'no-nested-ternary': 'off',
     'no-new-object': 'error',
     'no-plusplus': 'off',
@@ -328,7 +332,7 @@ module.exports = defineConfig({
     'space-before-blocks': ['error', 'always'],
     'space-in-parens': ['error', 'never'],
     'space-unary-ops': ['error', { words: true, nonwords: false }],
-    'spaced-comment': ['error', 'always', { exceptions: [], markers: []}],
+    'spaced-comment': 'off',
     'switch-colon-spacing': ['error', { after: true, before: false }],
     'template-tag-spacing': ['error', 'never'],
     'unicode-bom': ['error', 'never'],
@@ -370,8 +374,10 @@ module.exports = defineConfig({
       ignoreReadBeforeAssign: true
     }],
 
-    // Arrays are disabled here because of the unicorn/no-unreadable-array-destructuring
-    // rule.
+    /*
+     * Arrays are disabled here because of the unicorn/no-unreadable-array-destructuring
+     * rule.
+     */
     'prefer-destructuring': 'off',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
@@ -392,7 +398,7 @@ module.exports = defineConfig({
     'unicorn/better-regex': ['error', { sortCharacterClasses: true }],
     'unicorn/catch-error-name': ['error', { name: 'ex', ignore: ['^ex([A-Z0-9].*)?$']}],
     'unicorn/consistent-destructuring': 'off',
-    'unicorn/consistent-function-scoping': 'error',
+    'unicorn/consistent-function-scoping': 'off',
     'unicorn/custom-error-definition': 'off',
     'unicorn/empty-brace-spaces': 'off',
     'unicorn/error-message': 'error',
@@ -415,11 +421,13 @@ module.exports = defineConfig({
     'unicorn/no-hex-escape': 'error',
     'unicorn/no-instanceof-array': 'error',
     'unicorn/no-lonely-if': 'error',
-    'unicorn/no-nested-ternary': 'error',
+    'unicorn/no-nested-ternary': 'off',
     'unicorn/no-new-array': 'error',
 
-    // The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
-    // no-buffer-constructor rule.
+    /*
+     * The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
+     * no-buffer-constructor rule.
+     */
     'unicorn/no-new-buffer': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-object-as-default-parameter': 'error',
@@ -429,6 +437,7 @@ module.exports = defineConfig({
     'unicorn/no-unsafe-regex': 'off',
     'unicorn/no-unused-properties': 'off',
     'unicorn/no-useless-undefined': 'error',
+    'unicorn/no-useless-fallback-in-spread': 'error',
     'unicorn/no-zero-fractions': 'error',
     'unicorn/number-literal-case': 'error',
     'unicorn/numeric-separators-style': 'off',
@@ -445,6 +454,7 @@ module.exports = defineConfig({
     'unicorn/prefer-dom-node-dataset': 'error',
     'unicorn/prefer-dom-node-remove': 'off',
     'unicorn/prefer-dom-node-text-content': 'off',
+    'unicorn/prefer-export-from': 'error',
     'unicorn/prefer-object-has-own': 'off',
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-keyboard-event-key': 'error',
@@ -464,9 +474,11 @@ module.exports = defineConfig({
     'unicorn/prefer-string-starts-ends-with': 'error',
     'unicorn/prefer-string-trim-start-end': 'error',
 
-    // This rule is turned off since it not only applies to assignments, but to
-    // expressions using await/throw/yield as well. We have opened an issue to try
-    // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
+    /*
+     * This rule is turned off since it not only applies to assignments, but to
+     * expressions using await/throw/yield as well. We have opened an issue to try
+     * to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
+     */
     'unicorn/prefer-ternary': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/prefer-type-error': 'off',
@@ -654,8 +666,10 @@ module.exports = defineConfig({
     'no-duplicate-imports': 'off',
     '@typescript-eslint/no-duplicate-imports': ['error', { includeExports: true }],
 
-    // This rule is turned off since it not only applies to ts, but
-    // also to js and can break valid code
+    /*
+     * This rule is turned off since it not only applies to ts, but
+     * also to js and can break valid code
+     */
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -668,14 +682,13 @@ module.exports = defineConfig({
       outerIIFEBody: 1,
       MemberExpression: 1,
       FunctionDeclaration: { parameters: 'first', body: 1 },
-
-      // @ts-expect-error wrong type
       FunctionExpression: { parameters: 'first', body: 1 },
       CallExpression: { arguments: 'first' },
       ArrayExpression: 1,
       ObjectExpression: 1,
       ImportDeclaration: 1,
       flatTernaryExpressions: false,
+      offsetTernaryExpressions: false,
       ignoredNodes: [],
       ignoreComments: false
     }],
@@ -838,7 +851,7 @@ module.exports = defineConfig({
     '@typescript-eslint/unified-signatures': 'error',
 
     'sonarjs/cognitive-complexity': 'off',
-    'sonarjs/elseif-without-else': 'error',
+    'sonarjs/elseif-without-else': 'off',
     'sonarjs/max-switch-cases': 'off',
     'sonarjs/no-all-duplicated-branches': 'error',
     'sonarjs/no-collapsible-if': 'error',
@@ -868,7 +881,8 @@ module.exports = defineConfig({
     'sonarjs/prefer-immediate-return': 'error',
     'sonarjs/prefer-object-literal': 'error',
     'sonarjs/prefer-single-boolean-return': 'error',
-    'sonarjs/prefer-while': 'off'
+    'sonarjs/prefer-while': 'off',
+    'functional/prefer-tacit': 'error'
   },
   settings: {
     react: {
