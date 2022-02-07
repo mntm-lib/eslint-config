@@ -14,27 +14,36 @@ module.exports = defineConfig({
     'functional'
   ],
   env: {
-    browser: true,
-    commonjs: true,
-    node: true,
-    es6: true,
-    es2017: true,
-    es2020: true,
-    es2021: true
+    'browser': true,
+    'commonjs': true,
+    'node': true,
+    'es6': true,
+    'es2017': true,
+    'es2020': true,
+    'es2021': true,
+    'shared-node-browser': true
   },
   globals: {
     NodeJS: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
       globalReturn: false,
-      impliedStrict: false,
       jsx: true
-    }
+    },
+    extraFileExtensions: [
+      '.ts',
+      '.tsx',
+      '.mts',
+      '.cts',
+      '.js',
+      '.jsx',
+      '.mjs',
+      '.cjs'
+    ]
   },
   rules: {
     'for-direction': 'off',
@@ -454,8 +463,9 @@ module.exports = defineConfig({
     'unicorn/prefer-dom-node-dataset': 'error',
     'unicorn/prefer-dom-node-remove': 'off',
     'unicorn/prefer-dom-node-text-content': 'off',
-    'unicorn/prefer-export-from': 'error',
-    'unicorn/prefer-object-has-own': 'off',
+    'unicorn/prefer-export-from': ['error', {
+      ignoreUsedVariables: true
+    }],
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-keyboard-event-key': 'error',
     'unicorn/prefer-math-trunc': 'error',
@@ -488,6 +498,12 @@ module.exports = defineConfig({
     'unicorn/require-post-message-target-origin': 'error',
     'unicorn/string-content': 'off',
     'unicorn/throw-new-error': 'error',
+    'unicorn/no-thenable': 'error',
+
+    /**
+     * This rule is specific to NodeJS and not needed in the browser environment
+     */
+    'unicorn/prefer-json-parse-buffer': 'off',
 
     'react/boolean-prop-naming': 'off',
     'react/button-has-type': 'off',
