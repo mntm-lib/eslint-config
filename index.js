@@ -33,17 +33,7 @@ module.exports = defineConfig({
     ecmaFeatures: {
       globalReturn: false,
       jsx: true
-    },
-    extraFileExtensions: [
-      '.ts',
-      '.tsx',
-      '.mts',
-      '.cts',
-      '.js',
-      '.jsx',
-      '.mjs',
-      '.cjs'
-    ]
+    }
   },
   rules: {
     'for-direction': 'off',

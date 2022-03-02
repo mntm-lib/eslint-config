@@ -1,6 +1,6 @@
 {
   "name": "@mntm/eslint-config",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "author": {
     "name": "Anton Petrov",
@@ -23,18 +23,18 @@
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
-    "eslint-define-config": "^1.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint-define-config": "^1.2.5",
     "eslint-plugin-functional": "^4.2.0",
-    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-sonarjs": "^0.11.0",
-    "eslint-plugin-unicorn": "^40.1.0"
+    "eslint-plugin-sonarjs": "^0.12.0",
+    "eslint-plugin-unicorn": "^41.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.8.0",
-    "typescript": "^4.5.5"
+    "eslint": "^8.10.0",
+    "typescript": "^4.6.2"
   },
   "peerDependenciesMeta": {
     "eslint": {
@@ -45,7 +45,7 @@
     }
   },
   "devDependencies": {
-    "eslint": "^8.8.0",
-    "typescript": "^4.5.5"
+    "eslint": "^8.10.0",
+    "typescript": "^4.6.2"
   }
 }
