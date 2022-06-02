@@ -285,7 +285,10 @@ module.exports = defineConfig({
     'no-nested-ternary': 'off',
     'no-new-object': 'error',
     'no-plusplus': 'off',
-    'no-restricted-syntax': 'off',
+    'no-restricted-syntax': ['error', {
+      selector: 'ExportAllDeclaration',
+      message: 'Export all is disallowed'
+    }],
     'no-tabs': ['error', { allowIndentationTabs: false }],
     'no-ternary': 'off',
     'no-trailing-spaces': ['error', {
@@ -394,6 +397,7 @@ module.exports = defineConfig({
     'template-curly-spacing': ['error', 'never'],
     'yield-star-spacing': ['error', { before: true, after: true }],
 
+    'unicorn/prefer-native-coercion-functions': 'error',
     'unicorn/better-regex': ['error', { sortCharacterClasses: true }],
     'unicorn/catch-error-name': ['error', { name: 'ex', ignore: ['^ex([A-Z0-9].*)?$']}],
     'unicorn/consistent-destructuring': 'off',
@@ -498,7 +502,9 @@ module.exports = defineConfig({
     'react/boolean-prop-naming': 'off',
     'react/button-has-type': 'off',
     'react/default-props-match-prop-types': 'off',
-    'react/destructuring-assignment': ['error', 'always'],
+    'react/destructuring-assignment': ['error', 'always', {
+      destructureInSignature: 'always'
+    }],
     'react/display-name': 'off',
     'react/forbid-component-props': 'off',
     'react/forbid-dom-props': 'off',
@@ -570,8 +576,11 @@ module.exports = defineConfig({
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-spacing': ['error', {
       when: 'never',
-      objectLiterals: 'never',
-      allowMultiline: false
+      children: true,
+      attributes: {
+        objectLiterals: 'never',
+        allowMultiline: false
+      }
     }],
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': ['error', {
@@ -591,7 +600,9 @@ module.exports = defineConfig({
     }],
     'react/jsx-max-depth': 'off',
     'react/jsx-max-props-per-line': 'off',
-    'react/jsx-newline': 'off',
+    'react/jsx-newline': ['error', {
+      prevent: true
+    }],
     'react/jsx-no-bind': ['error', {
       ignoreRefs: false,
       ignoreDOMComponents: false,
