@@ -581,12 +581,7 @@ module.exports = defineConfig({
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-spacing': ['error', {
       when: 'never',
-      children: true,
-      allowMultiline: true,
-      attributes: {
-        objectLiterals: 'never',
-        allowMultiline: false
-      }
+      allowMultiline: true
     }],
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': ['error', {
@@ -642,7 +637,15 @@ module.exports = defineConfig({
       beforeClosing: 'never'
     }],
     'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': 'error',
+    'react/jsx-wrap-multilines': ['error', {
+      declaration: 'parens-new-line',
+      assignment: 'parens-new-line',
+      return: 'parens-new-line',
+      arrow: 'parens-new-line',
+      condition: 'parens',
+      logical: 'parens-new-line',
+      prop: 'parens-new-line'
+    }],
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
@@ -879,7 +882,7 @@ module.exports = defineConfig({
     'sonarjs/no-all-duplicated-branches': 'error',
     'sonarjs/no-collapsible-if': 'error',
     'sonarjs/no-collection-size-mischeck': 'error',
-    'sonarjs/no-duplicate-string': 'error',
+    'sonarjs/no-duplicate-string': 'off',
     'sonarjs/no-duplicated-branches': 'error',
     'sonarjs/no-element-overwrite': 'error',
     'sonarjs/no-empty-collection': 'error',
