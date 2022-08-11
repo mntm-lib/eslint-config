@@ -1,6 +1,6 @@
 {
   "name": "@mntm/eslint-config",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "index.js",
   "author": {
     "name": "Anton Petrov",
@@ -22,15 +22,15 @@
     "url": "https://github.com/maxi-team/eslint-config.git"
   },
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.1.3",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "eslint-define-config": "^1.5.0",
-    "eslint-plugin-functional": "^4.2.1",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "eslint-plugin-sonarjs": "^0.13.0",
-    "eslint-plugin-unicorn": "^42.0.0"
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint-define-config": "^1.6.0",
+    "eslint-plugin-functional": "^4.2.2",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^0.15.0",
+    "eslint-plugin-unicorn": "^43.0.2"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
@@ -45,7 +45,7 @@
     }
   },
   "devDependencies": {
-    "eslint": "^8.16.0",
-    "typescript": "^4.7.2"
+    "eslint": "^8.21.0",
+    "typescript": "^4.7.4"
   }
 }

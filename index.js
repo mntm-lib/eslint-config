@@ -24,7 +24,8 @@ module.exports = defineConfig({
     'shared-node-browser': true
   },
   globals: {
-    NodeJS: true
+    NodeJS: true,
+    JSX: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -97,7 +98,7 @@ module.exports = defineConfig({
     'curly': ['error', 'all'],
     'default-case': 'error',
     'default-case-last': 'error',
-    'dot-location': ['error', 'object'],
+    'dot-location': ['error', 'property'],
     'eqeqeq': ['error', 'always', { null: 'ignore' }],
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
     'guard-for-in': 'off',
@@ -263,11 +264,11 @@ module.exports = defineConfig({
     'max-params': 'off',
     'max-statements': 'off',
     'max-statements-per-line': ['error', { max: 1 }],
-    'multiline-comment-style': ['error', 'starred-block'],
+    'multiline-comment-style': 'off',
     'multiline-ternary': ['error', 'always-multiline'],
     'new-cap': 'off',
     'new-parens': ['error', 'always'],
-    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 3 }],
     'no-bitwise': ['error', { allow: [], int32Hint: false }],
     'no-continue': 'off',
     'no-inline-comments': 'off',
@@ -382,7 +383,7 @@ module.exports = defineConfig({
      */
     'prefer-destructuring': 'off',
     'prefer-numeric-literals': 'error',
-    'prefer-rest-params': 'error',
+    'prefer-rest-params': 'off',
     'prefer-spread': 'off',
     'prefer-template': 'error',
     'require-yield': 'error',
@@ -409,7 +410,6 @@ module.exports = defineConfig({
     'unicorn/expiring-todo-comments': 'off',
     'unicorn/explicit-length-check': ['error', { 'non-zero': 'greater-than' }],
     'unicorn/filename-case': 'off',
-    'unicorn/import-index': 'off',
     'unicorn/import-style': 'off',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
@@ -477,6 +477,7 @@ module.exports = defineConfig({
     'unicorn/prefer-string-slice': 'error',
     'unicorn/prefer-string-starts-ends-with': 'error',
     'unicorn/prefer-string-trim-start-end': 'error',
+    'unicorn/prefer-logical-operator-over-ternary': 'error',
 
     /*
      * This rule is turned off since it not only applies to assignments, but to
@@ -489,7 +490,11 @@ module.exports = defineConfig({
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/require-array-join-separator': 'error',
     'unicorn/require-number-to-fixed-digits-argument': 'error',
-    'unicorn/require-post-message-target-origin': 'error',
+
+    /**
+     * False-positive for ServiceWorker postMessage
+     */
+    'unicorn/require-post-message-target-origin': 'off',
     'unicorn/string-content': 'off',
     'unicorn/throw-new-error': 'error',
     'unicorn/no-thenable': 'error',
@@ -516,7 +521,7 @@ module.exports = defineConfig({
       singleline: 'consistent'
     }],
     'react/no-access-state-in-setstate': 'error',
-    'react/no-array-index-key': 'error',
+    'react/no-array-index-key': 'off',
     'react/no-children-prop': 'error',
     'react/no-danger': 'off',
     'react/no-danger-with-children': 'error',
@@ -577,6 +582,7 @@ module.exports = defineConfig({
     'react/jsx-curly-spacing': ['error', {
       when: 'never',
       children: true,
+      allowMultiline: true,
       attributes: {
         objectLiterals: 'never',
         allowMultiline: false
@@ -899,11 +905,12 @@ module.exports = defineConfig({
     'sonarjs/prefer-object-literal': 'error',
     'sonarjs/prefer-single-boolean-return': 'error',
     'sonarjs/prefer-while': 'off',
-    'functional/prefer-tacit': 'error'
+    'functional/prefer-tacit': 'error',
+    'functional/no-class': 'error'
   },
   settings: {
     react: {
-      version: '17'
+      version: '18'
     }
   }
 });
