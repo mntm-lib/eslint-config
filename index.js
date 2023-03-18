@@ -628,7 +628,7 @@ module.exports = defineConfig({
     'react/jsx-pascal-case': ['error', { allowAllCaps: false, ignore: []}],
     'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-props-no-spreading': 'off',
-    'react/jsx-sort-default-props': 'off',
+    'react/sort-default-props': 'off',
     'react/jsx-sort-props': 'off',
     'react/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
@@ -908,8 +908,8 @@ module.exports = defineConfig({
     'sonarjs/prefer-object-literal': 'error',
     'sonarjs/prefer-single-boolean-return': 'error',
     'sonarjs/prefer-while': 'off',
-    'functional/prefer-tacit': 'error',
-    'functional/no-class': 'error'
+    'functional/prefer-tacit': 'warn',
+    'functional/no-classes': 'error'
   },
   settings: {
     react: {
