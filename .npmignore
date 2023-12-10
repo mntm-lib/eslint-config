@@ -4,4 +4,6 @@
 .eslintcache
 tsconfig.json
 yarn.lock
+.yarnrc.yml
+.yarn/
 node_modules/
