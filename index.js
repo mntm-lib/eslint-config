@@ -32,7 +32,8 @@ module.exports = defineConfig({
     ecmaFeatures: {
       globalReturn: false,
       jsx: true
-    }
+    },
+    jsDocParsingMode: 'none'
   },
   rules: {
     'for-direction': 'off',
@@ -957,12 +958,7 @@ module.exports = defineConfig({
       'always'
     ],
     'react/prefer-read-only-props': 'off',
-    'react/prefer-stateless-function': [
-      'error',
-      {
-        ignorePureComponents: false
-      }
-    ],
+    'react/prefer-stateless-function': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
@@ -1227,9 +1223,7 @@ module.exports = defineConfig({
         ignoreComments: false
       }
     ],
-    '@typescript-eslint/init-declarations': [
-      'off'
-    ],
+    '@typescript-eslint/init-declarations': 'off',
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': [
       'error',
@@ -1311,10 +1305,6 @@ module.exports = defineConfig({
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': 'off',
     '@typescript-eslint/no-misused-new': 'error',
-    '@typescript-eslint/no-misused-promises': ['error', {
-      checksConditionals: true,
-      checksVoidReturn: false
-    }],
     '@typescript-eslint/no-namespace': ['error', {
       allowDeclarations: false,
       allowDefinitionFiles: true
@@ -1339,12 +1329,7 @@ module.exports = defineConfig({
     '@typescript-eslint/no-throw-literal': 'error',
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
-    '@typescript-eslint/no-unnecessary-condition': 'error',
-    '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-    '@typescript-eslint/no-unnecessary-type-assertion': ['error', {
-      typesToIgnore: []
-    }],
+
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -1367,7 +1352,6 @@ module.exports = defineConfig({
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-var-requires': 'error',
-    '@typescript-eslint/non-nullable-type-assertion-style': 'error',
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': [
       'error',
@@ -1396,17 +1380,7 @@ module.exports = defineConfig({
     '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-    '@typescript-eslint/promise-function-async': [
-      'error',
-      {
-        allowAny: true,
-        allowedPromiseNames: [],
-        checkArrowFunctions: true,
-        checkFunctionDeclarations: true,
-        checkFunctionExpressions: true,
-        checkMethodDeclarations: true
-      }
-    ],
+    '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': 'error',
     'require-await': 'off',
     '@typescript-eslint/require-await': 'off',
@@ -1453,16 +1427,14 @@ module.exports = defineConfig({
       }
     ],
     '@typescript-eslint/typedef': 'off',
-    '@typescript-eslint/unbound-method': 'error',
+
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/no-duplicate-enum-values': 'error',
     '@typescript-eslint/no-duplicate-type-constituents': 'error',
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
-    '@typescript-eslint/no-unsafe-enum-comparison': 'error',
-    '@typescript-eslint/no-confusing-void-expression': 'error',
-    '@typescript-eslint/no-meaningless-void-operator': 'error',
+
     '@typescript-eslint/no-mixed-enums': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'off',
     '@typescript-eslint/prefer-return-this-type': 'error',
@@ -1502,7 +1474,19 @@ module.exports = defineConfig({
     'sonarjs/prefer-single-boolean-return': 'error',
     'sonarjs/prefer-while': 'off',
     'functional/prefer-tacit': 'warn',
-    'functional/no-classes': 'error'
+    'functional/no-classes': 'error',
+
+    // Disabled due to unnecessary slowdown
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/no-meaningless-void-operator': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+    '@typescript-eslint/no-unnecessary-condition': 'off',
+    '@typescript-eslint/no-unnecessary-qualifier': 'off',
+    '@typescript-eslint/no-unnecessary-type-arguments': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+    '@typescript-eslint/unbound-method': 'off'
   },
   settings: {
     react: {

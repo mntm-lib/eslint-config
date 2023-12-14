@@ -1,6 +1,6 @@
 {
   "name": "@mntm/eslint-config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "index.js",
   "author": {
     "name": "Anton Petrov",
@@ -23,10 +23,10 @@
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.6.0",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "@typescript-eslint/type-utils": "^6.13.2",
-    "@typescript-eslint/utils": "^6.13.2",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@typescript-eslint/type-utils": "^6.14.0",
+    "@typescript-eslint/utils": "^6.14.0",
     "eslint-define-config": "^2.0.0",
     "eslint-plugin-functional": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
