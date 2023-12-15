@@ -11,7 +11,8 @@ module.exports = defineConfig({
     'react-hooks',
     'unicorn',
     'sonarjs',
-    'functional'
+    'functional',
+    'import'
   ],
   env: {
     'browser': true,
@@ -1170,13 +1171,6 @@ module.exports = defineConfig({
       objectLiteralTypeAssertions: 'allow'
     }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-        disallowTypeAnnotations: true
-      }
-    ],
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
     'dot-notation': 'off',
@@ -1475,6 +1469,41 @@ module.exports = defineConfig({
     'sonarjs/prefer-while': 'off',
     'functional/prefer-tacit': 'warn',
     'functional/no-classes': 'error',
+
+    // Type imports and exports without side-effects
+    '@typescript-eslint/consistent-type-exports': [
+      'error',
+      {
+        fixMixedExportsWithInlineTypeSpecifier: false
+      }
+    ],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        disallowTypeAnnotations: false,
+        fixStyle: 'separate-type-imports',
+        prefer: 'type-imports'
+      }
+    ],
+    'import/consistent-type-specifier-style': [
+      'error',
+      'prefer-top-level'
+    ],
+    'import/no-duplicates': [
+      'error',
+      {
+        'prefer-inline': false,
+        'considerQueryString': true
+      }
+    ],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'type'
+        ]
+      }
+    ],
 
     // Disabled due to unnecessary slowdown
     '@typescript-eslint/no-confusing-void-expression': 'off',
